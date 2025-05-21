@@ -110,7 +110,7 @@ const Layout = () => {
             <Box sx={{ flexGrow: 0 }}>
               <Link to="/">
                 <img
-                  src="https://dms.mydukaan.io/original/webp/media/cddbb387-06ce-46eb-8234-e6f77c01f119.png"
+                  src="/MoneySquad.png"
                   alt="MoneySquad Logo"
                   style={{ height: 36 }}
                 />

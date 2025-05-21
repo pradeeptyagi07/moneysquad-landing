@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Container, Typography, Grid, Card, CardContent, CardMedia, Button, Paper } from "@mui/material"
+import { Box, Container, Typography, Grid, Button, Paper } from "@mui/material"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
@@ -67,7 +67,7 @@ const AboutPage = () => {
                 consultants, and other professionals with 50+ lending institutions across the country.
               </Typography>
               <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: "1.1rem", mb: 3 }}>
-                Founded in 2020, we have rapidly grown to become the partner of choice for thousands of financial
+                Founded in 2022, we have rapidly grown to become the partner of choice for thousands of financial
                 professionals who want to expand their service offerings and increase their income.
               </Typography>
               <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: "1.1rem" }}>
@@ -345,7 +345,7 @@ const AboutPage = () => {
               {
                 year: "2022",
                 title: "Technology Expansion",
-                description: "Launched our partner mobile app and enhanced the platform with AI-based loan matching.",
+                description: "Launched our Partner Portal and enhanced the platform with AI-based loan matching.",
               },
               {
                 year: "2023",
@@ -461,7 +461,7 @@ const AboutPage = () => {
           </Box>
         </Box>
 
-        {/* Our Team */}
+        {/* Statistics Section */}
         <Box sx={{ mb: 10 }}>
           <Box sx={{ textAlign: "center", mb: 6 }}>
             <motion.div
@@ -484,7 +484,7 @@ const AboutPage = () => {
                   display: "inline-block",
                 }}
               >
-                Our Leadership Team
+                Statistics
               </Typography>
               <Box sx={{ width: 60, height: 4, bgcolor: "primary.main", mx: "auto", mb: 3, borderRadius: 2 }} />
               <Typography
@@ -493,116 +493,199 @@ const AboutPage = () => {
                 paragraph
                 sx={{ maxWidth: 800, mx: "auto", fontSize: "1.1rem" }}
               >
-                Meet the experienced professionals who drive our vision and partner success
+                Our numbers speak for themselves. Join India's fastest-growing loan distribution network.
               </Typography>
             </motion.div>
           </Box>
 
           <Grid container spacing={4}>
-            {[
-              {
-                name: "Rajesh Kumar",
-                title: "Founder & CEO",
-                bio: "With over 15 years of experience in financial services, Rajesh founded MoneySquad to transform how loan products are distributed in India.",
-                image:
-                  "https://images.unsplash.com/photo-1560264357-8d9202250f21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwYnVzaW5lc3MlMjBtYW58ZW58MXx8fHwxNzQ2MzgyMDYyfDA&ixlib=rb-4.0.3&q=80&w=1080",
-              },
-              {
-                name: "Priya Sharma",
-                title: "Chief Operating Officer",
-                bio: "Priya oversees the day-to-day operations, ensuring our partners receive exceptional service and support for their business growth.",
-                image:
-                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwYnVzaW5lc3MlMjB3b21hbnxlbnwxfHx8fDE3NDYzODIwNjJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              },
-              {
-                name: "Vikram Singh",
-                title: "Chief Technology Officer",
-                bio: "Vikram leads our technology initiatives, creating innovative solutions that keep our platform at the cutting edge of the industry.",
-                image:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MnxcIGluZGlhbiUyMHRlY2glMjBleGVjdXRpdmV8ZW58MXx8fHwxNzQ2MzgyMDYyfDA&ixlib=rb-4.0.3&q=80&w=1080",
-              },
-            ].map((member, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card
-                    sx={{
-                      height: "100%",
-                      borderRadius: 4,
-                      overflow: "hidden",
-                      boxShadow: "0 15px 50px rgba(0,0,0,0.08)",
-                      transition: "all 0.3s ease",
-                      "&:hover": {
-                        transform: "translateY(-10px)",
-                        boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ position: "relative", overflow: "hidden", height: 320 }}>
-                      <CardMedia
-                        component="img"
-                        height="320"
-                        image={member.image}
-                        alt={member.name}
-                        sx={{
-                          transition: "transform 0.6s ease",
-                          "&:hover": {
-                            transform: "scale(1.05)",
-                          },
-                        }}
-                      />
-                      <Box
-                        sx={{
-                          position: "absolute",
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          height: "60%",
-                          background: "linear-gradient(to top, rgba(0,0,0,0.8), transparent)",
-                        }}
-                      />
-                      <Box
-                        sx={{
-                          position: "absolute",
-                          bottom: 20,
-                          left: 20,
-                          right: 20,
-                          color: "white",
-                        }}
-                      >
-                        <Typography
-                          variant="h5"
-                          component="h3"
-                          gutterBottom
-                          fontWeight="bold"
-                          fontFamily="Inter, Arial, sans-serif"
-                          sx={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
-                        >
-                          {member.name}
-                        </Typography>
-                        <Typography
-                          variant="subtitle1"
-                          color="primary.light"
-                          gutterBottom
-                          sx={{ fontWeight: 600, textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
-                        >
-                          {member.title}
-                        </Typography>
-                      </Box>
-                    </Box>
-                    <CardContent sx={{ p: 3 }}>
-                      <Typography variant="body1" color="text.secondary" sx={{ fontSize: "1.05rem" }}>
-                        {member.bio}
+            <Grid item xs={12} md={6}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 4,
+                  borderRadius: 3,
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                  height: "100%",
+                }}
+              >
+                <Typography variant="h5" component="h3" gutterBottom fontWeight="bold" sx={{ mb: 4 }}>
+                  Partner Performance
+                </Typography>
+
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        5000+
                       </Typography>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </Grid>
-            ))}
+                      <Typography variant="body1" color="text.secondary">
+                        Active Partners
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        ₹25L+
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Avg. Monthly Income
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        40%
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Higher Commissions
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        72hrs
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Avg. Payout Time
+                      </Typography>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 4,
+                  borderRadius: 3,
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                  height: "100%",
+                }}
+              >
+                <Typography variant="h5" component="h3" gutterBottom fontWeight="bold" sx={{ mb: 4 }}>
+                  Business Impact
+                </Typography>
+
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        50+
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Lending Partners
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        ₹500Cr+
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Loan Disbursals
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        85%
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Approval Rate
+                      </Typography>
+                    </Paper>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        textAlign: "center",
+                        border: "1px solid rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <Typography variant="h3" color="primary" sx={{ fontWeight: "bold", mb: 1 }}>
+                        24hrs
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        Avg. Approval Time
+                      </Typography>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </Grid>
           </Grid>
         </Box>
 

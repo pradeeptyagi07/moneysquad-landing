@@ -6,7 +6,6 @@ import {
   Grid,
   Typography,
   Button,
-  TextField,
   List,
   ListItem,
   ListItemIcon,
@@ -130,15 +129,9 @@ const Footer = () => {
         <Grid container spacing={4} sx={{ mb: 6 }}>
           {/* Column 1: About */}
           <Grid item xs={12} md={6} lg={3}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              color="text.primary"
-              fontFamily="Inter, Arial, sans-serif"
-              fontWeight="bold"
-            >
-              MoneySquad
-            </Typography>
+            <Box sx={{ mb: 2 }}>
+              <img src="/MoneySquad_Logo.png" alt="MoneySquad Logo" style={{ height: 40 }} />
+            </Box>
             <Box sx={{ width: 48, height: 4, bgcolor: "primary.main", mb: 2, borderRadius: 4 }} />
             <Typography variant="body2" sx={{ mb: 3, color: "text.secondary" }}>
               India's leading loan distribution platform connecting financial advisors with 50+ lending partners to
@@ -207,7 +200,7 @@ const Footer = () => {
                 { label: "Home", path: "/" },
                 { label: "Products", path: "/products" },
                 { label: "Benefits", path: "/benefits" },
-                { label: "Process", path: "/" },
+                { label: "Lenders", path: "/products" },
                 { label: "FAQ", path: "/" },
                 { label: "Contact", path: "/contact" },
               ].map((item, index) => (
@@ -327,7 +320,7 @@ const Footer = () => {
                   </Box>
                 </ListItemIcon>
                 <ListItemText
-                  primary="partners@moneysquad.in"
+                  primary="hello@moneysquad.in"
                   secondary="Email us for partnership"
                   primaryTypographyProps={{ color: "text.secondary" }}
                   secondaryTypographyProps={{ fontSize: 12 }}
@@ -360,34 +353,6 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        {/* Newsletter Section */}
-        <Paper variant="outlined" sx={{ p: 3, mb: 6, borderRadius: 2 }}>
-          <Box textAlign="center" sx={{ mb: 3 }}>
-            <Typography variant="h6" gutterBottom fontFamily="Inter, Arial, sans-serif" fontWeight="bold">
-              Subscribe to Our Newsletter
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Stay updated with the latest news, product updates, and industry insights.
-            </Typography>
-          </Box>
-          <Box
-            component="form"
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              gap: 2,
-              maxWidth: 500,
-              mx: "auto",
-            }}
-          >
-            <TextField placeholder="Enter your email" variant="outlined" fullWidth size="small" />
-            <Button variant="contained" color="primary" sx={{ px: 3, whiteSpace: "nowrap" }}>
-              Subscribe
-            </Button>
-          </Box>
-        </Paper>
-
-        {/* Bottom Footer */}
         <Divider />
         <Box
           sx={{

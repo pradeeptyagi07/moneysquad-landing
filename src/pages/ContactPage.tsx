@@ -538,7 +538,7 @@ const ContactPage = () => {
                   <MenuItem value="property-consultant">Property Consultant</MenuItem>
                   <MenuItem value="chartered-accountant">Chartered Accountant</MenuItem>
                   <MenuItem value="insurance-agent">Insurance Agent</MenuItem>
-                  <MenuItem value="Software Developer">Software Developer</MenuItem>
+                  <MenuItem value="Freelancer">Freelancer</MenuItem>
                   <MenuItem value="other">Other</MenuItem>
                 </TextField>
 
@@ -567,13 +567,7 @@ const ContactPage = () => {
 
                 <FormControlLabel
                   control={
-                    <Checkbox
-                      required
-                      name="terms"
-                      color="primary"
-                      checked={formData.terms}
-                      onChange={handleCheckboxChange}
-                    />
+                    <Checkbox name="terms" color="primary" checked={formData.terms} onChange={handleCheckboxChange} />
                   }
                   label={
                     <Typography variant="body2">
@@ -801,7 +795,7 @@ const ContactPage = () => {
                 }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8622652036694!2d77.0758!3d28.6284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d0aaaaaaaa%3A0x0!2zMjjCsDM3JzQyLjIiTiA3N8KwMDQnMzIuOSJF!5e0!3m2!1sen!2sin!4v1689123456789!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7763456723456!2d77.07942867549395!3d28.629488175649396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04aa2d7c0001%3A0x7a7b1c1c7d7d7d7d!2sWestend%20Mall%2C%20Janakpuri%2C%20New%20Delhi%2C%20Delhi%20110058!5e0!3m2!1sen!2sin!4v1716382123456!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

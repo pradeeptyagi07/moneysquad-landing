@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Box,
   Container,
@@ -10,20 +10,20 @@ import {
   Rating,
   Button,
   Paper,
-  Divider,
-} from "@mui/material"
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote"
-import VerifiedIcon from "@mui/icons-material/Verified"
-import { motion } from "framer-motion"
+  useTheme,
+  alpha,
+} from "@mui/material";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
     id: 1,
     name: "Rajesh Sharma",
-    title: "Financial Advisor, Mumbai",
-    avatar:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwYnVzaW5lc3NtYW58ZW58MHx8fHwxNzQ2MzgzMzc5fDA&ixlib=rb-4.0.3&q=80&w=400",
+    title: "Financial Advisor",
+    location: "Mumbai",
+    avatar: "https://images.unsplash.com/photo-1611605698335-cbe44af8b118?auto=format&fit=crop&w=500&q=80", // Indian male
     rating: 5,
     since: "2022",
     text: "Partnering with MoneySquad has been a game-changer for my financial advisory business. Their technology platform makes loan processing seamless, and I've seen my monthly income increase by 40% in just 3 months. The best part is the access to multiple lenders through a single dashboard, which has dramatically improved my loan approval rates.",
@@ -31,43 +31,48 @@ const testimonials = [
   {
     id: 2,
     name: "Priya Patel",
-    title: "Mortgage Broker, Delhi",
-    avatar:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwYnVzaW5lc3MlMjB3b21hbnxlbnwwfHx8fDE3NDYzODMzNzl8MA&ixlib=rb-4.0.3&q=80&w=400",
+    title: "Freelancer",
+    location: "Delhi",
+    avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=500&q=80", // Indian woman
     rating: 5,
-    since: "2021",
-    text: "The commission structure at MoneySquad is the best in the industry. I've been able to scale my mortgage business significantly since joining their partner network. Their quick disbursement process keeps my clients happy and coming back with referrals.",
+    since: "2022",
+    text: "The commission structure at MoneySquad is the best in the industry. I've been able to scale my unsecured loans business significantly since joining their partner network. Their quick disbursement process keeps my clients happy and coming back with referrals.",
   },
   {
     id: 3,
-    name: "Vikram Malhotra",
-    title: "Financial Consultant, Bangalore",
-    avatar:
-      "https://images.unsplash.com/photo-1566753323558-f4e0952af115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwYnVzaW5lc3NtYW58ZW58MHx8fHwxNzQ2MzgzMzc5fDA&ixlib=rb-4.0.3&q=80&w=400",
+    name: "Vikram Singh",
+    title: "Chartered Accountant",
+    location: "Bangalore",
+    avatar: "https://images.unsplash.com/photo-1628294898850-f1c49a16f2c1?auto=format&fit=crop&w=500&q=80", // Indian male
     rating: 5,
     since: "2023",
-    text: "What sets MoneySquad apart is their partner support team. Whenever I have questions or need assistance with a complex loan case, they're always available and extremely helpful. This level of support has helped me close deals that would have otherwise fallen through.",
+    text: "As a CA, I can now offer loan services to my clients as an additional service. The commission structure is transparent, and payouts are always on time. What sets MoneySquad apart is their partner support team - whenever I have questions, they're always available.",
   },
   {
     id: 4,
-    name: "Ananya Singh",
-    title: "Wealth Manager, Hyderabad",
-    avatar:
-      "https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8aW5kaWFuJTIwYnVzaW5lc3MlMjB3b21hbnxlbnwwfHx8fDE3NDYzODMzNzl8MA&ixlib=rb-4.0.3&q=80&w=400",
-    rating: 4,
+    name: "Amit Kumar",
+    title: "Insurance Agent",
+    location: "Chennai",
+    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80", // Indian male
+    rating: 5,
     since: "2022",
-    text: "The training resources provided by MoneySquad have been invaluable for my team. We've been able to expand our service offerings beyond wealth management to include various loan products, creating additional revenue streams for our business.",
+    text: "The support team is exceptional. Whenever I face any challenges with loan processing, they're just a call away and resolve issues promptly. I've been able to expand my service offerings beyond insurance to include various loan products, creating additional revenue streams.",
   },
-]
+];
+
+
+
 
 const Testimonials = () => {
+  const theme = useTheme();
 
   return (
     <Box
       component="section"
       sx={{
         py: { xs: 6, md: 10 },
-        background: "linear-gradient(180deg, rgba(240,248,248,1) 0%, rgba(255,255,255,1) 100%)",
+        background:
+          "linear-gradient(180deg, rgba(240,248,248,1) 0%, rgba(255,255,255,1) 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -100,7 +105,9 @@ const Testimonials = () => {
 
       <Container maxWidth="xl">
         {/* Section Header */}
-        <Box sx={{ mb: 6, textAlign: "center", position: "relative", zIndex: 1 }}>
+        <Box
+          sx={{ mb: 6, textAlign: "center", position: "relative", zIndex: 1 }}
+        >
           <Typography
             variant="overline"
             component={motion.div}
@@ -160,12 +167,12 @@ const Testimonials = () => {
               color: "text.secondary",
             }}
           >
-            Hear from our successful partners about how MoneySquad has transformed their businesses and increased their
-            revenue.
+            Hear from our partners who have transformed their business with
+            MoneySquad.
           </Typography>
         </Box>
 
-        {/* Featured Testimonial */}
+        {/* Featured Testimonial - Redesigned for better readability */}
         <Paper
           component={motion.div}
           initial={{ opacity: 0, y: 30 }}
@@ -173,47 +180,35 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           elevation={2}
           sx={{
-            mb: 8,
+            mb: 6,
             borderRadius: 4,
             overflow: "hidden",
             position: "relative",
             background: "linear-gradient(135deg, #f9f9f9 0%, #f0f8f8 100%)",
+            boxShadow: `0 10px 30px ${alpha(theme.palette.primary.main, 0.1)}`,
           }}
         >
-          {/* Quote icon */}
-          <FormatQuoteIcon
-            sx={{
-              position: "absolute",
-              top: 20,
-              right: 20,
-              fontSize: 60,
-              color: "rgba(0, 184, 148, 0.1)",
-              transform: "rotate(180deg)",
-            }}
-          />
-
           <Grid container spacing={0}>
             <Grid
               item
               xs={12}
-              md={4}
+              md={3}
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
                 alignItems: "center",
-                p: { xs: 4, md: 5 },
+                justifyContent: "center",
+                p: { xs: 4, md: 4 },
                 position: "relative",
                 zIndex: 1,
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  width: { xs: 0, md: 40 },
-                  background: "linear-gradient(90deg, rgba(240,248,248,0) 0%, rgba(240,248,248,1) 100%)",
-                  zIndex: -1,
+                bgcolor: alpha(theme.palette.primary.main, 0.03),
+                borderRight: {
+                  xs: "none",
+                  md: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+                },
+                borderBottom: {
+                  xs: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+                  md: "none",
                 },
               }}
             >
@@ -222,8 +217,8 @@ const Testimonials = () => {
                   src={testimonials[0].avatar}
                   alt={testimonials[0].name}
                   sx={{
-                    width: 160,
-                    height: 160,
+                    width: 120,
+                    height: 120,
                     border: "4px solid white",
                     boxShadow: "0 4px 20px rgba(0, 184, 148, 0.15)",
                   }}
@@ -236,27 +231,47 @@ const Testimonials = () => {
                     bgcolor: "primary.main",
                     color: "white",
                     borderRadius: "50%",
-                    width: 32,
-                    height: 32,
+                    width: 28,
+                    height: 28,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     border: "2px solid white",
                   }}
                 >
-                  <VerifiedIcon sx={{ fontSize: 20 }} />
+                  <VerifiedIcon sx={{ fontSize: 16 }} />
                 </Box>
               </Box>
 
-              <Typography variant="h6" sx={{ fontWeight: 600, textAlign: "center", mb: 0.5 }}>
+              <Typography
+                variant="h6"
+                sx={{ fontWeight: 600, textAlign: "center", mb: 0.5 }}
+              >
                 {testimonials[0].name}
               </Typography>
 
-              <Typography variant="body2" color="text.secondary" sx={{ textAlign: "center", mb: 1.5 }}>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ textAlign: "center", mb: 0.5 }}
+              >
                 {testimonials[0].title}
               </Typography>
 
-              <Rating value={testimonials[0].rating} readOnly precision={0.5} sx={{ mb: 1 }} />
+              <Typography
+                variant="body2"
+                color="primary"
+                sx={{ textAlign: "center", mb: 1.5, fontWeight: 500 }}
+              >
+                {testimonials[0].location}
+              </Typography>
+
+              <Rating
+                value={testimonials[0].rating}
+                readOnly
+                precision={0.5}
+                sx={{ mb: 1 }}
+              />
 
               <Typography
                 variant="caption"
@@ -276,7 +291,7 @@ const Testimonials = () => {
             <Grid
               item
               xs={12}
-              md={8}
+              md={9}
               sx={{
                 p: { xs: 4, md: 5 },
                 display: "flex",
@@ -284,176 +299,159 @@ const Testimonials = () => {
                 justifyContent: "center",
               }}
             >
+              <FormatQuoteIcon
+                sx={{
+                  fontSize: 40,
+                  color: alpha(theme.palette.primary.main, 0.2),
+                  mb: 2,
+                }}
+              />
+
               <Typography
-                variant="h5"
+                variant="h6"
                 component="blockquote"
                 sx={{
                   fontStyle: "italic",
                   lineHeight: 1.6,
-                  mb: 4,
-                  position: "relative",
                   color: "text.primary",
                   fontWeight: 400,
-                  pl: 3,
-                  borderLeft: "4px solid",
-                  borderColor: "primary.light",
-                  py: 1,
+                  mb: 2,
                 }}
               >
                 {testimonials[0].text}
               </Typography>
-
-              <Button
-                variant="outlined"
-                color="primary"
-                endIcon={<ArrowForwardIcon />}
-                sx={{
-                  alignSelf: "flex-start",
-                  borderRadius: 2,
-                  px: 3,
-                  "&:hover": {
-                    backgroundColor: "rgba(0, 184, 148, 0.08)",
-                    transform: "translateX(5px)",
-                  },
-                  transition: "all 0.3s ease",
-                }}
-              >
-                Read Full Story
-              </Button>
             </Grid>
           </Grid>
         </Paper>
 
-        {/* Testimonial Cards */}
-        <Typography
-          variant="h5"
-          component={motion.h5}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          sx={{
-            mb: 4,
-            fontWeight: 600,
-            textAlign: "center",
-          }}
-        >
-          More Success Stories
-        </Typography>
-
-        <Box sx={{ position: "relative", mb: 8 }}>
-          <Grid container spacing={3}>
-            {testimonials.slice(1).map((testimonial, index) => (
-              <Grid item xs={12} md={4} key={testimonial.id}>
-                <Card
-                  component={motion.div}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{
-                    y: -10,
-                    boxShadow: "0 10px 30px rgba(0, 184, 148, 0.1)",
-                  }}
+        {/* Testimonial Cards - Redesigned for better readability */}
+        <Grid container spacing={3} sx={{ mb: 6 }}>
+          {testimonials.slice(1).map((testimonial, index) => (
+            <Grid item xs={12} md={4} key={testimonial.id}>
+              <Card
+                component={motion.div}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{
+                  y: -10,
+                  boxShadow: "0 10px 30px rgba(0, 184, 148, 0.1)",
+                }}
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: 3,
+                  overflow: "hidden",
+                  boxShadow: "0 4px 15px rgba(0, 0, 0, 0.05)",
+                  transition: "all 0.3s ease",
+                  border: "1px solid rgba(0, 184, 148, 0.1)",
+                }}
+              >
+                <CardContent
                   sx={{
-                    height: "100%",
+                    p: 3,
+                    flexGrow: 1,
                     display: "flex",
                     flexDirection: "column",
-                    borderRadius: 3,
-                    overflow: "hidden",
-                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.05)",
-                    transition: "all 0.3s ease",
-                    border: "1px solid rgba(0, 184, 148, 0.1)",
                   }}
                 >
-                  <CardContent sx={{ p: 3, flexGrow: 1 }}>
-                    <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                      <Avatar
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        sx={{
-                          width: 60,
-                          height: 60,
-                          mr: 2,
-                          border: "2px solid white",
-                          boxShadow: "0 2px 10px rgba(0, 184, 148, 0.15)",
-                        }}
-                      />
-                      <Box>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                          {testimonial.name}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {testimonial.title}
-                        </Typography>
-                      </Box>
-                    </Box>
-
-                    <Divider sx={{ my: 2 }} />
-
-                    <Typography
-                      variant="body1"
-                      color="text.secondary"
+                  <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+                    <Avatar
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
                       sx={{
-                        mb: 2,
-                        lineHeight: 1.6,
-                        position: "relative",
-                        pl: 1,
-                        "&::before": {
-                          content: '""',
-                          position: "absolute",
-                          left: -4,
-                          top: 0,
-                          bottom: 0,
-                          width: 3,
-                          bgcolor: "primary.main",
-                          borderRadius: 4,
-                          opacity: 0.6,
-                        },
+                        width: 64,
+                        height: 64,
+                        mr: 2,
+                        border: "2px solid white",
+                        boxShadow: "0 2px 10px rgba(0, 184, 148, 0.15)",
                       }}
-                    >
-                      "{testimonial.text.substring(0, 120)}..."
-                    </Typography>
-
-                    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mt: "auto" }}>
-                      <Rating value={testimonial.rating} readOnly size="small" />
+                    />
+                    <Box>
                       <Typography
-                        variant="caption"
-                        sx={{
-                          bgcolor: "rgba(0, 184, 148, 0.1)",
-                          color: "primary.main",
-                          px: 1.5,
-                          py: 0.5,
-                          borderRadius: 10,
-                          fontWeight: 500,
-                        }}
+                        variant="subtitle1"
+                        sx={{ fontWeight: 600, lineHeight: 1.2 }}
                       >
-                        Since {testimonial.since}
+                        {testimonial.name}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ mb: 0.5 }}
+                      >
+                        {testimonial.title}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="primary.main"
+                        sx={{ fontWeight: 500 }}
+                      >
+                        {testimonial.location}
                       </Typography>
                     </Box>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                  </Box>
 
-          <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-            <Button
-              variant="outlined"
-              color="primary"
-              endIcon={<ArrowForwardIcon />}
-              sx={{
-                borderRadius: 2,
-                px: 3,
-                "&:hover": {
-                  backgroundColor: "rgba(0, 184, 148, 0.08)",
-                  transform: "translateX(5px)",
-                },
-                transition: "all 0.3s ease",
-              }}
-            >
-              View All Testimonials
-            </Button>
-          </Box>
-        </Box>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      bgcolor: alpha(theme.palette.primary.main, 0.03),
+                      p: 2.5,
+                      borderRadius: 2,
+                      mb: 2,
+                      flexGrow: 1,
+                    }}
+                  >
+                    <FormatQuoteIcon
+                      sx={{
+                        position: "absolute",
+                        top: 10,
+                        left: 10,
+                        fontSize: 20,
+                        color: alpha(theme.palette.primary.main, 0.2),
+                      }}
+                    />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{
+                        lineHeight: 1.6,
+                        pl: 3,
+                        pr: 1,
+                      }}
+                    >
+                      "{testimonial.text}"
+                    </Typography>
+                  </Box>
+
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      mt: "auto",
+                    }}
+                  >
+                    <Rating value={testimonial.rating} readOnly size="small" />
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        bgcolor: "rgba(0, 184, 148, 0.1)",
+                        color: "primary.main",
+                        px: 1.5,
+                        py: 0.5,
+                        borderRadius: 10,
+                        fontWeight: 500,
+                      }}
+                    >
+                      Since {testimonial.since}
+                    </Typography>
+                  </Box>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
 
         {/* CTA Section */}
         <Box
@@ -518,11 +516,18 @@ const Testimonials = () => {
               fontWeight: 400,
             }}
           >
-            Become a MoneySquad partner today and start growing your business with our industry-leading loan products
-            and support.
+            Become a MoneySquad partner today and start growing your business
+            with our industry-leading loan products and support.
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
+              flexWrap: "wrap",
+            }}
+          >
             <Button
               variant="contained"
               sx={{
@@ -566,7 +571,7 @@ const Testimonials = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

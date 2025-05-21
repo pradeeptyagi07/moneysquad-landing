@@ -24,7 +24,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import ProductsSection from "../components/products/ProductsSection"
+import LenderPartners from "../components/lenders/LenderPartners"
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -618,9 +618,9 @@ const ProductsPage = () => {
           </motion.div>
         </Box>
 
-        {/* Use ProductsSection component */}
+        {/* Use LenderPartners component */}
         <Box sx={{ mt: 12 }}>
-          <ProductsSection />
+          <LenderPartners />
         </Box>
 
         {/* CTA Section */}

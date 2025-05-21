@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
+import type React from "react";
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -13,13 +13,12 @@ import {
   AccordionDetails,
   Button,
   Link,
-} from "@mui/material"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-import EmailIcon from "@mui/icons-material/Email"
-import PhoneIcon from "@mui/icons-material/Phone"
-import ChatIcon from "@mui/icons-material/Chat"
-import { motion } from "framer-motion"
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
+import ChatIcon from "@mui/icons-material/Chat";
+import { motion } from "framer-motion";
 
 const faqs = [
   {
@@ -30,7 +29,7 @@ const faqs = [
   {
     question: "What commission rates does MoneySquad offer?",
     answer:
-      "MoneySquad offers industry-leading commission rates ranging from 1% to 3% depending on the loan product and volume. Our personal loans offer up to 2% commission, business loans up to 2.5%, and professional loans up to 3%. The more clients you refer, the higher your commission tier becomes.",
+      "MoneySquad offers industry-leading commission rates ranging from 1% to 3.5% depending on the loan product and volume. Our personal loans offer up to 3% commission, business loans up to 3.5%, and professional loans up to 3%. The more clients you refer, the higher your commission tier becomes.",
   },
   {
     question: "How quickly are commissions paid out?",
@@ -52,21 +51,23 @@ const faqs = [
     answer:
       "As a MoneySquad partner, you can offer a wide range of loan products including personal loans, business loans, professional loans, and overdraft facilities. Each product category has multiple options to suit different client needs and eligibility criteria.",
   },
-]
+];
 
 const FAQSection = () => {
-  const [expanded, setExpanded] = useState<string | false>("panel0")
+  const [expanded, setExpanded] = useState<string | false>("panel0");
 
-  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false)
-  }
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
 
   return (
     <Box
       component="section"
       sx={{
         py: { xs: 6, md: 10 },
-        background: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,248,248,1) 100%)",
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,248,248,1) 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -99,7 +100,9 @@ const FAQSection = () => {
 
       <Container maxWidth="xl">
         {/* Section Header */}
-        <Box sx={{ mb: 6, textAlign: "center", position: "relative", zIndex: 1 }}>
+        <Box
+          sx={{ mb: 6, textAlign: "center", position: "relative", zIndex: 1 }}
+        >
           <Typography
             variant="overline"
             component={motion.div}
@@ -159,7 +162,8 @@ const FAQSection = () => {
               color: "text.secondary",
             }}
           >
-            Find answers to common questions about our partner program, commission structure, and support services.
+            Find answers to common questions about our partner program,
+            commission structure, and support services.
           </Typography>
         </Box>
 
@@ -193,7 +197,10 @@ const FAQSection = () => {
                     "&:before": {
                       display: "none",
                     },
-                    bgcolor: expanded === `panel${index}` ? "rgba(0, 184, 148, 0.03)" : "transparent",
+                    bgcolor:
+                      expanded === `panel${index}`
+                        ? "rgba(0, 184, 148, 0.03)"
+                        : "transparent",
                     transition: "all 0.3s ease",
                   }}
                 >
@@ -201,7 +208,10 @@ const FAQSection = () => {
                     expandIcon={
                       <ExpandMoreIcon
                         sx={{
-                          color: expanded === `panel${index}` ? "primary.main" : "text.secondary",
+                          color:
+                            expanded === `panel${index}`
+                              ? "primary.main"
+                              : "text.secondary",
                           transition: "all 0.3s ease",
                         }}
                       />
@@ -218,7 +228,10 @@ const FAQSection = () => {
                       variant="h6"
                       sx={{
                         fontWeight: expanded === `panel${index}` ? 600 : 500,
-                        color: expanded === `panel${index}` ? "primary.main" : "text.primary",
+                        color:
+                          expanded === `panel${index}`
+                            ? "primary.main"
+                            : "text.primary",
                         transition: "all 0.3s ease",
                       }}
                     >
@@ -252,36 +265,6 @@ const FAQSection = () => {
                 </Accordion>
               ))}
             </Paper>
-
-            <Box
-              component={motion.div}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                mt: 2,
-              }}
-            >
-              <Button
-                variant="outlined"
-                color="primary"
-                endIcon={<ArrowForwardIcon />}
-                sx={{
-                  borderRadius: 2,
-                  px: 3,
-                  py: 1.5,
-                  "&:hover": {
-                    backgroundColor: "rgba(0, 184, 148, 0.08)",
-                    transform: "translateX(5px)",
-                  },
-                  transition: "all 0.3s ease",
-                }}
-              >
-                View All FAQs
-              </Button>
-            </Box>
           </Grid>
 
           <Grid item xs={12} md={8} sx={{ mt: 4 }}>
@@ -331,8 +314,12 @@ const FAQSection = () => {
                     <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
                       Email Support
                     </Typography>
-                    <Link href="mailto:partners@moneysquad.com" underline="hover" sx={{ color: "primary.main" }}>
-                      partners@moneysquad.com
+                    <Link
+                      href="mailto:hello@moneysquad.in"
+                      underline="hover"
+                      sx={{ color: "primary.main" }}
+                    >
+                      hello@moneysquad.in{" "}
                     </Link>
                   </Box>
                 </Box>
@@ -357,8 +344,12 @@ const FAQSection = () => {
                     <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
                       Partner Helpline
                     </Typography>
-                    <Link href="tel:+918000123456" underline="hover" sx={{ color: "primary.main" }}>
-                      +91 8000 123 456
+                    <Link
+                      href="tel:+91 011-4709 4707"
+                      underline="hover"
+                      sx={{ color: "primary.main" }}
+                    >
+                      011-4709 4707
                     </Link>
                   </Box>
                 </Box>
@@ -412,7 +403,7 @@ const FAQSection = () => {
         </Grid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default FAQSection
+export default FAQSection;
