@@ -107,7 +107,7 @@ const HomePage = () => {
                       { value: 30, prefix: "₹", suffix: "Cr+", label: "Monthly Disbursals", delay: 0.2 },
                       { value: 5000, suffix: "+", label: "Active Partners", delay: 0.4 },
                     ].map((stat, index) => (
-                      <Grid item xs={4} sm={4} key={index}>
+                      <Grid item xs={12} sm={4} key={index}>
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ const HomePage = () => {
                             elevation={0}
                             sx={{
                               py: 2,
-                              px: 3,
+                              px: { xs: 1, sm: 3 },
                               height: "100%",
                               bgcolor: "rgba(255,255,255,0.1)",
                               backdropFilter: "blur(10px)",
@@ -145,7 +145,16 @@ const HomePage = () => {
                               },
                             }}
                           >
-                            <Typography variant="h3" fontWeight="bold" sx={{ mb: 1 }}>
+                            <Typography
+                              variant="h3"
+                              fontWeight="bold"
+                              sx={{
+                                mb: 1,
+                                fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
+                                whiteSpace: "nowrap",
+                                textAlign: "center",
+                              }}
+                            >
                               <CountUp
                                 end={stat.value}
                                 prefix={stat.prefix || ""}
@@ -153,7 +162,14 @@ const HomePage = () => {
                                 delay={stat.delay}
                               />
                             </Typography>
-                            <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                            <Typography
+                              variant="body2"
+                              sx={{
+                                opacity: 0.8,
+                                textAlign: "center",
+                                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem" },
+                              }}
+                            >
                               {stat.label}
                             </Typography>
                           </Paper>

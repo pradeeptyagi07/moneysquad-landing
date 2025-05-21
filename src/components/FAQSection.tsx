@@ -375,7 +375,7 @@ const FAQSection = () => {
                       Live Chat
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Available 9 AM - 6 PM (Mon-Sat)
+                      Available 10 AM - 6.30 PM (Mon-Sat)
                     </Typography>
                   </Box>
                 </Box>

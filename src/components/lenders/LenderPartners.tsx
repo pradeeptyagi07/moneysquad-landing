@@ -501,67 +501,6 @@ const LenderPartners = () => {
             />
             Partnered with 65+ leading financial institutions
           </Typography>
-
-          <Box
-            sx={{
-              display: "flex",
-              gap: 3, // More space between badges
-              justifyContent: "center",
-              mt: 2, // More space above
-            }}
-          >
-            <Box
-              sx={{
-                px: 3, // Wider badge
-                py: 1, // Taller badge
-                borderRadius: 2,
-                bgcolor: alpha(theme.palette.primary.main, 0.1),
-                color: "primary.main",
-                fontSize: "0.85rem", // Larger font
-                fontWeight: "medium",
-                display: "flex",
-                alignItems: "center",
-                gap: 0.5,
-              }}
-            >
-              <Box
-                component="span"
-                sx={{
-                  width: 8, // Larger dot
-                  height: 8,
-                  borderRadius: "50%",
-                  bgcolor: "primary.main",
-                }}
-              />
-              Banks: {lenders.filter((l) => l.category === "Bank").length}
-            </Box>
-
-            <Box
-              sx={{
-                px: 3, // Wider badge
-                py: 1, // Taller badge
-                borderRadius: 2,
-                bgcolor: alpha(theme.palette.secondary.main, 0.1),
-                color: "secondary.main",
-                fontSize: "0.85rem", // Larger font
-                fontWeight: "medium",
-                display: "flex",
-                alignItems: "center",
-                gap: 0.5,
-              }}
-            >
-              <Box
-                component="span"
-                sx={{
-                  width: 8, // Larger dot
-                  height: 8,
-                  borderRadius: "50%",
-                  bgcolor: "secondary.main",
-                }}
-              />
-              NBFCs: {lenders.filter((l) => l.category === "NBFC").length}
-            </Box>
-          </Box>
         </Box>
       </Container>
     </Box>

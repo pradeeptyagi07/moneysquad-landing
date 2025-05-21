@@ -333,22 +333,22 @@ const AboutPage = () => {
 
             {[
               {
-                year: "2020",
+                year: "2022",
                 title: "Foundation",
                 description: "MoneySquad was founded with a vision to transform loan distribution in India.",
               },
               {
-                year: "2021",
+                year: "2023",
                 title: "First 1000 Partners",
                 description: "Reached our first milestone of 1,000 active partners across 10 cities in India.",
               },
               {
-                year: "2022",
+                year: "2024",
                 title: "Technology Expansion",
                 description: "Launched our Partner Portal and enhanced the platform with AI-based loan matching.",
               },
               {
-                year: "2023",
+                year: "2025",
                 title: "Market Leadership",
                 description: "Expanded to 50+ lending partners and 5,000+ active distribution partners nationwide.",
               },
