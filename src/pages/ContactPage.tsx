@@ -1213,7 +1213,7 @@ const ContactPage = () => {
             boxShadow: "0 15px 50px rgba(0,0,0,0.2)",
             transform: animateIn ? "translateY(0)" : "translateY(40px)",
             opacity: animateIn ? 1 : 0,
-            transition: "transform 0.6s ease-out 1.2s, opacity 0.6s ease-out 1.2s",
+            transition: "transform 0.6s ease-out 1.2s, opacity 0.6s ease-out 1.3s",
           }}
         >
           {/* Decorative Elements */}
