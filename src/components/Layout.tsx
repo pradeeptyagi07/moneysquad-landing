@@ -67,7 +67,7 @@ const Layout = () => {
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1, p: 2 }}>
           <Button
             component="a"
-            href="https://moneysquadcrm.netlify.app/"
+            href="https://app.moneysquad.in/"
             target="_blank"
             rel="noopener noreferrer"
             variant="outlined"
@@ -78,7 +78,7 @@ const Layout = () => {
           </Button>
           <Button
             component="a"
-            href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+            href="https://app.moneysquad.in/sign-up/become-partner"
             target="_blank"
             rel="noopener noreferrer"
             variant="contained"
@@ -175,7 +175,7 @@ const Layout = () => {
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
               <Button
                 component="a"
-                href="https://moneysquadcrm.netlify.app/"
+                href="https://app.moneysquad.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outlined"
@@ -196,7 +196,7 @@ const Layout = () => {
               </Button>
               <Button
                 component="a"
-                href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+                href="https://app.moneysquad.in/sign-up/become-partner"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="contained"

@@ -82,7 +82,7 @@ const Footer = () => {
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   component="a"
-                  href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+                  href="https://app.moneysquad.in/sign-up/become-partner"
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="contained"
@@ -96,7 +96,7 @@ const Footer = () => {
                 </Button>
                 <Button
                   component="a"
-                  href="https://moneysquadcrm.netlify.app/"
+                  href="https://app.moneysquad.in/"
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="contained"

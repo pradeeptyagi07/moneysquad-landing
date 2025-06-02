@@ -60,7 +60,7 @@ const HomePage = () => {
                 <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mb: 6 }} justifyContent="center">
                   <Button
                     component="a"
-                    href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+                    href="https://app.moneysquad.in/sign-up/become-partner"
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="contained"
@@ -80,7 +80,7 @@ const HomePage = () => {
                   </Button>
                   <Button
                     component="a"
-                    href="https://moneysquadcrm.netlify.app/"
+                    href="https://app.moneysquad.in/"
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="contained"

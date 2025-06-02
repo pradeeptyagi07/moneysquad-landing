@@ -212,7 +212,7 @@ const PartnerCTA = () => {
         <Stack direction={{ xs: "column", sm: "row" }} spacing={3} justifyContent="center">
           <Button
             component="a"
-            href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+            href="https://app.moneysquad.in/sign-up/become-partner"
             target="_blank"
             rel="noopener noreferrer"
             variant="contained"
@@ -443,7 +443,7 @@ const PartnerNetwork = () => {
                     </Typography>
                     <Button
                       component="a"
-                      href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+                      href="https://app.moneysquad.in/sign-up/become-partner"
                       target="_blank"
                       rel="noopener noreferrer"
                       endIcon={<ArrowRightAltIcon sx={{ transition: "transform 0.3s ease" }} />}

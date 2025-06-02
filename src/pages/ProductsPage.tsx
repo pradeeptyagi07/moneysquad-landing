@@ -671,7 +671,7 @@ const ProductsPage = () => {
               <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap" }}>
                 <Button
                   component="a"
-                  href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+                  href="https://app.moneysquad.in/sign-up/become-partner"
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="contained"

@@ -233,7 +233,7 @@ const ProductsCTA = () => {
         </Typography>
         <Button
           component="a"
-          href="https://moneysquadcrm.netlify.app/sign-up/become-partner"
+          href="https://app.moneysquad.in/sign-up/become-partner"
           target="_blank"
           rel="noopener noreferrer"
           variant="contained"
