@@ -306,7 +306,7 @@ const ProductsSection = () => {
       description: "Help your clients meet their personal financial needs with quick and hassle-free personal loans.",
       features: ["Minimal Documentation", "Competitive Interest Rates", "Flexible Loan Amounts"],
       image:
-        "https://images.unsplash.com/photo-1444653389962-8149286c578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+        "Personal_Loan.jpg",
     },
     {
       label: "Business Loans",
@@ -314,7 +314,7 @@ const ProductsSection = () => {
       description: "Empower businesses with the capital they need to grow, expand, and thrive.",
       features: ["Collateral-Free Options", "Customized Repayment", "Higher Loan Amounts"],
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+        "Business_Loan.jpg",
     },
     {
       label: "Professional Loans",
@@ -322,7 +322,7 @@ const ProductsSection = () => {
       description: "Specialized loan products for doctors, CAs, and other professionals to grow their practice.",
       features: ["Preferential Rates", "Equipment Financing", "Practice Expansion"],
       image:
-        "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+        "Professional.jpg",
     },
     {
       label: "Overdrafts",
@@ -330,7 +330,7 @@ const ProductsSection = () => {
       description: "Flexible credit line for businesses to manage cash flow gaps and working capital needs.",
       features: ["Pay Interest Only on Usage", "Revolving Credit", "Quick Access to Funds"],
       image:
-        "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Nnx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+        "Overdraft.jpg",
     },
   ]
 

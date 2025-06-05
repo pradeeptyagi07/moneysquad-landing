@@ -263,7 +263,7 @@ const ContactPage = () => {
           position: "relative",
           background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
           color: "white",
-          py: { xs: 8, md: 10 },
+          py: { xs: 7, md: 9 },
           overflow: "hidden",
         }}
       >
@@ -1103,7 +1103,7 @@ const ContactPage = () => {
                   >
                     <Box
                       component="img"
-                      src="https://images.unsplash.com/photo-1560264418-c4445382edbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwY3VzdG9tZXIlMjBzZXJ2aWNlJTIwcmVwcmVzZW50YXRpdmUlMjB3aXRoJTIwaGVhZHNldHxlbnwxfHx8fDE3NDYzODE4OTV8MA&ixlib=rb-4.0.3&q=80&w=1080"
+                      src="About_Us_Support_Team_Lead.jpg"
                       alt="Support team member"
                       sx={{
                         width: "100%",
@@ -1132,7 +1132,7 @@ const ContactPage = () => {
                   >
                     <Box
                       component="img"
-                      src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwY3VzdG9tZXIlMjBzZXJ2aWNlJTIwcmVwcmVzZW50YXRpdmUlMjB3aXRoJTIwaGVhZHNldHxlbnwxfHx8fDE3NDYzODE4OTV8MA&ixlib=rb-4.0.3&q=80&w=1080"
+                      src="AboutUs_Partner.jpg"
                       alt="Support team leader"
                       sx={{
                         width: "100%",

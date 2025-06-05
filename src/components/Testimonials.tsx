@@ -20,10 +20,10 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Rajesh Sharma",
+    name: "Ravindar Singh",
     title: "Financial Advisor",
     location: "Mumbai",
-    avatar: "https://images.unsplash.com/photo-1611605698335-cbe44af8b118?auto=format&fit=crop&w=500&q=80", // Indian male
+    avatar: "/testimonial_1.jpg", // Indian male
     rating: 5,
     since: "2022",
     text: "Partnering with MoneySquad has been a game-changer for my financial advisory business. Their technology platform makes loan processing seamless, and I've seen my monthly income increase by 40% in just 3 months. The best part is the access to multiple lenders through a single dashboard, which has dramatically improved my loan approval rates.",
@@ -33,17 +33,17 @@ const testimonials = [
     name: "Priya Patel",
     title: "Freelancer",
     location: "Delhi",
-    avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=500&q=80", // Indian woman
+    avatar: "/testimonial_3.jpeg", // Indian male
     rating: 5,
     since: "2022",
     text: "The commission structure at MoneySquad is the best in the industry. I've been able to scale my unsecured loans business significantly since joining their partner network. Their quick disbursement process keeps my clients happy and coming back with referrals.",
   },
   {
     id: 3,
-    name: "Vikram Singh",
+    name: "Vikram Chauhan",
     title: "Chartered Accountant",
     location: "Bangalore",
-    avatar: "https://images.unsplash.com/photo-1628294898850-f1c49a16f2c1?auto=format&fit=crop&w=500&q=80", // Indian male
+    avatar: "/testimonial_2.jpeg", // Indian male
     rating: 5,
     since: "2023",
     text: "As a CA, I can now offer loan services to my clients as an additional service. The commission structure is transparent, and payouts are always on time. What sets MoneySquad apart is their partner support team - whenever I have questions, they're always available.",
@@ -53,7 +53,7 @@ const testimonials = [
     name: "Amit Kumar",
     title: "Insurance Agent",
     location: "Chennai",
-    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80", // Indian male
+    avatar: "/testimonial_4.jpeg", // Indian male
     rating: 5,
     since: "2022",
     text: "The support team is exceptional. Whenever I face any challenges with loan processing, they're just a call away and resolve issues promptly. I've been able to expand my service offerings beyond insurance to include various loan products, creating additional revenue streams.",

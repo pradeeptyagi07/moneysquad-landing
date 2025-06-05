@@ -13,7 +13,7 @@ const AboutPage = () => {
         sx={{
           bgcolor: "primary.main",
           color: "white",
-          py: 6,
+          py: 14,
         }}
       >
         <Container maxWidth="lg">

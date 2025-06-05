@@ -72,7 +72,7 @@ const ProductsPage = () => {
         "Flexible Loan Amounts - Loans ranging from ₹50,000 to ₹50 lakhs to suit various needs.",
       ],
       image:
-        "https://images.unsplash.com/photo-1444653389962-8149286c578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "Personal_Loan.jpg",
     },
     {
       title: "Business Loans",
@@ -83,7 +83,7 @@ const ProductsPage = () => {
         "Higher Loan Amounts - Business loans up to ₹2 crores with competitive interest rates.",
       ],
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "Business_Loan.jpg",
     },
     {
       title: "Professional Loans",
@@ -94,7 +94,7 @@ const ProductsPage = () => {
         "Practice Expansion - Tailored solutions for clinic setup and practice growth.",
       ],
       image:
-        "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "Professional.jpg",
     },
     {
       title: "Overdrafts",
@@ -105,7 +105,7 @@ const ProductsPage = () => {
         "Quick Access to Funds - Immediate availability of funds for emergency business needs.",
       ],
       image:
-        "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Nnx8cHJvZmVzc2lvbmFsJTIwSW5kaWFuJTIwYnVzaW5lc3MlMjBwYXJ0bmVycyUyMGRpc2N1c3NpbmclMjBsb2FuJTIwZG9jdW1lbnRzfGVufDB8fHx8MTc0NjM4MTI5N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "Overdraft.jpg",
     },
   ]
 
@@ -159,8 +159,9 @@ const ProductsPage = () => {
         sx={{
           position: "relative",
           color: "white",
-          py: { xs: 10, md: 14 },
+          py: { xs: 6, md: 8 },
           overflow: "hidden",
+
         }}
       >
         {/* Background with gradient overlay */}

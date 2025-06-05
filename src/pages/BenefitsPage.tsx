@@ -33,7 +33,7 @@ const BenefitsPage = () => {
         sx={{
           position: "relative",
           color: "white",
-          py: { xs: 10, md: 14 },
+          py: { xs: 8, md: 10 },
           overflow: "hidden",
         }}
       >
@@ -207,7 +207,7 @@ const BenefitsPage = () => {
                   "Earn up to 40% higher commissions compared to industry standards with our competitive payout structure.",
                 icon: <MonetizationOnOutlinedIcon fontSize="large" />,
                 image:
-                  "https://images.unsplash.com/photo-1444653389962-8149286c578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8QjJCJTIwZmluYW5jaWFsJTIwcGFydG5lcnNoaXAlMjBiZW5lZml0c3xlbnwxfHx8fDE3NDYzODE0MDN8MA&ixlib=rb-4.0.3&q=80&w=1080",
+                  "Benefits - higher earnings.jpg",
                 points: ["Transparent commission structure", "Faster payout cycles", "Performance-based incentives"],
                 color: "#FF6B6B",
               },
@@ -217,7 +217,7 @@ const BenefitsPage = () => {
                   "Access our cutting-edge partner portal and mobile app to manage your business efficiently.",
                 icon: <DevicesOutlinedIcon fontSize="large" />,
                 image:
-                  "https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NXx8QjJCJTIwZmluYW5jaWFsJTIwcGFydG5lcnNoaXAlMjBiZW5lZml0c3xlbnwxfHx8fDE3NDYzODE0MDN8MA&ixlib=rb-4.0.3&q=80&w=1080",
+                  "Benefits  Advanced_Technology.jpg",
                 points: [
                   "Real-time application tracking",
                   "Digital document submission",
@@ -541,7 +541,7 @@ const BenefitsPage = () => {
                     >
                       <Box
                         component="img"
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8QjJCJTIwZmluYW5jaWFsJTIwcGFydG5lcnNoaXAlMjBiZW5lZml0c3xlbnwxfHx8fDE3NDYzODE0MDN8MA&ixlib=rb-4.0.3&q=80&w=1080"
+                        src="More_Partner_Advantages.jpg"
                         alt="Partner Benefits"
                         sx={{
                           width: "100%",

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Box,
   Container,
@@ -11,10 +11,10 @@ import {
   Avatar,
   Stack,
   Paper,
-} from "@mui/material"
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+} from "@mui/material";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // Partner Journey Component
 const PartnerJourney = () => {
@@ -42,7 +42,8 @@ const PartnerJourney = () => {
             right: 0,
             width: "30%",
             height: "30%",
-            background: "radial-gradient(circle, rgba(18,170,158,0.08) 0%, rgba(255,255,255,0) 70%)",
+            background:
+              "radial-gradient(circle, rgba(18,170,158,0.08) 0%, rgba(255,255,255,0) 70%)",
             borderRadius: "0 0 0 100%",
           },
         }}
@@ -64,7 +65,11 @@ const PartnerJourney = () => {
           >
             Your Partner Journey
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 700, mx: "auto", fontSize: "1.1rem" }}>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ maxWidth: 700, mx: "auto", fontSize: "1.1rem" }}
+          >
             Simple steps to start earning with MoneySquad's partner program.
           </Typography>
         </Box>
@@ -74,25 +79,36 @@ const PartnerJourney = () => {
             {
               number: "1",
               title: "Register",
-              description: "Complete our simple registration process to join our partner network.",
+              description:
+                "Complete our simple registration process to join our partner network.",
             },
             {
               number: "2",
               title: "Verification",
-              description: "Our team verifies your details and activates your partner account.",
+              description:
+                "Our team verifies your details and activates your partner account.",
             },
             {
               number: "3",
               title: "Refer Clients",
-              description: "Start referring clients for various loan products through our platform.",
+              description:
+                "Start referring clients for various loan products through our platform.",
             },
             {
               number: "4",
               title: "Earn Rewards",
-              description: "Receive competitive commissions for every successful loan disbursement.",
+              description:
+                "Receive competitive commissions for every successful loan disbursement.",
             },
           ].map((step, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index} sx={{ textAlign: "center" }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              key={index}
+              sx={{ textAlign: "center" }}
+            >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -150,7 +166,11 @@ const PartnerJourney = () => {
                 >
                   {step.title}
                 </Typography>
-                <Typography variant="body1" color="text.secondary" sx={{ fontSize: "1rem" }}>
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  sx={{ fontSize: "1rem" }}
+                >
                   {step.description}
                 </Typography>
               </motion.div>
@@ -159,8 +179,8 @@ const PartnerJourney = () => {
         </Grid>
       </Paper>
     </motion.div>
-  )
-}
+  );
+};
 
 // Partner CTA Component
 const PartnerCTA = () => {
@@ -206,10 +226,24 @@ const PartnerCTA = () => {
         >
           Ready to Grow Your Business?
         </Typography>
-        <Typography variant="h6" sx={{ maxWidth: 700, mx: "auto", mb: 4, opacity: 0.9, fontWeight: 400 }}>
-          Join our partner network today and start offering the best loan products to your clients.
+        <Typography
+          variant="h6"
+          sx={{
+            maxWidth: 700,
+            mx: "auto",
+            mb: 4,
+            opacity: 0.9,
+            fontWeight: 400,
+          }}
+        >
+          Join our partner network today and start offering the best loan
+          products to your clients.
         </Typography>
-        <Stack direction={{ xs: "column", sm: "row" }} spacing={3} justifyContent="center">
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={3}
+          justifyContent="center"
+        >
           <Button
             component="a"
             href="https://app.moneysquad.in/sign-up/become-partner"
@@ -255,11 +289,38 @@ const PartnerCTA = () => {
         </Stack>
       </Paper>
     </motion.div>
-  )
-}
+  );
+};
 
 // Main Partner Network Component
 const PartnerNetwork = () => {
+  const partnerData = [
+    {
+      title: "Financial Advisors",
+      description:
+        "Expand your service offerings with our comprehensive loan products and earn additional commission.",
+      // file is located at public/financial-advisor.jpg
+      image: "/financial _advisor.jpg",
+      stats: "30% Higher Income",
+    },
+    {
+      title: "Property Consultants",
+      description:
+        "Help your clients secure financing for their property purchases and earn attractive incentives.",
+      // file is located at public/property-consultant.jpg
+      image: "/property _consultant.jpg",
+      stats: "40% Faster Approvals",
+    },
+    {
+      title: "Chartered Accountants",
+      description:
+        "Provide value-added financial services to your clients and create a new revenue stream.",
+      // file is located at public/chartered-accountant.jpg
+      image: "/chartered_accountant.jpg",
+      stats: "50+ Loan Products",
+    },
+  ];
+
   return (
     <Box
       sx={{
@@ -274,7 +335,8 @@ const PartnerNetwork = () => {
           left: 0,
           right: 0,
           height: "100%",
-          background: "radial-gradient(circle at top right, rgba(18,170,158,0.05) 0%, rgba(255,255,255,0) 70%)",
+          background:
+            "radial-gradient(circle at top right, rgba(18,170,158,0.05) 0%, rgba(255,255,255,0) 70%)",
           zIndex: 0,
         },
       }}
@@ -314,7 +376,16 @@ const PartnerNetwork = () => {
             >
               Our Partner Network
             </Typography>
-            <Box sx={{ width: 80, height: 4, bgcolor: "primary.main", mx: "auto", mb: 3, borderRadius: 2 }} />
+            <Box
+              sx={{
+                width: 80,
+                height: 4,
+                bgcolor: "primary.main",
+                mx: "auto",
+                mb: 3,
+                borderRadius: 2,
+              }}
+            />
             <Typography
               variant="body1"
               color="text.secondary"
@@ -324,38 +395,15 @@ const PartnerNetwork = () => {
                 fontSize: "1.1rem",
               }}
             >
-              Join thousands of financial advisors and consultants who are growing their business with MoneySquad.
+              Join thousands of financial advisors and consultants who are
+              growing their business with MoneySquad.
             </Typography>
           </motion.div>
         </Box>
 
         <Grid container spacing={4} mb={8}>
           {/* Partner Cards */}
-          {[
-            {
-              title: "Financial Advisors",
-              description:
-                "Expand your service offerings with our comprehensive loan products and earn additional commission.",
-              image:
-                "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZmVzc2lvbmFsJTIwZmluYW5jaWFsJTIwYWR2aXNvcnMlMjBtZWV0aW5nJTIwY2xpZW50c3xlbnwwfHx8fDE3NDYzODEyMzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              stats: "30% Higher Income",
-            },
-            {
-              title: "Property Consultants",
-              description:
-                "Help your clients secure financing for their property purchases and earn attractive incentives.",
-              image:
-                "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NXx8cHJvZmVzc2lvbmFsJTIwZmluYW5jaWFsJTIwYWR2aXNvcnMlMjBtZWV0aW5nJTIwY2xpZW50c3xlbnwwfHx8fDE3NDYzODEyMzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              stats: "40% Faster Approvals",
-            },
-            {
-              title: "Chartered Accountants",
-              description: "Provide value-added financial services to your clients and create a new revenue stream.",
-              image:
-                "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwZmluYW5jaWFsJTIwYWR2aXNvcnMlMjBtZWV0aW5nJTIwY2xpZW50c3xlbnwwfHx8fDE3NDYzODEyMzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              stats: "50+ Loan Products",
-            },
-          ].map((partner, index) => (
+          {partnerData.map((partner, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -386,7 +434,13 @@ const PartnerNetwork = () => {
                     },
                   }}
                 >
-                  <Box sx={{ position: "relative", overflow: "hidden", height: 240 }}>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      overflow: "hidden",
+                      height: 240,
+                    }}
+                  >
                     <CardMedia
                       component="img"
                       height="240"
@@ -404,7 +458,8 @@ const PartnerNetwork = () => {
                         left: 0,
                         right: 0,
                         height: "50%",
-                        background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)",
+                        background:
+                          "linear-gradient(to top, rgba(0,0,0,0.7), transparent)",
                       }}
                     />
                     <Box
@@ -438,7 +493,12 @@ const PartnerNetwork = () => {
                     >
                       {partner.title}
                     </Typography>
-                    <Typography variant="body1" color="text.secondary" paragraph sx={{ mb: 3 }}>
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      paragraph
+                      sx={{ mb: 3 }}
+                    >
                       {partner.description}
                     </Typography>
                     <Button
@@ -446,7 +506,11 @@ const PartnerNetwork = () => {
                       href="https://app.moneysquad.in/sign-up/become-partner"
                       target="_blank"
                       rel="noopener noreferrer"
-                      endIcon={<ArrowRightAltIcon sx={{ transition: "transform 0.3s ease" }} />}
+                      endIcon={
+                        <ArrowRightAltIcon
+                          sx={{ transition: "transform 0.3s ease" }}
+                        />
+                      }
                       color="primary"
                       sx={{
                         textTransform: "none",
@@ -476,7 +540,7 @@ const PartnerNetwork = () => {
         <PartnerCTA />
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default PartnerNetwork
+export default PartnerNetwork;
