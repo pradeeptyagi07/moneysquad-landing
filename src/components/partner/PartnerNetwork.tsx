@@ -246,7 +246,7 @@ const PartnerCTA = () => {
         >
           <Button
             component="a"
-            href="https://app.moneysquad.in/sign-up/become-partner"
+            href="https://app.moneysquad.in/become-partner"
             target="_blank"
             rel="noopener noreferrer"
             variant="contained"
@@ -503,7 +503,7 @@ const PartnerNetwork = () => {
                     </Typography>
                     <Button
                       component="a"
-                      href="https://app.moneysquad.in/sign-up/become-partner"
+                      href="https://app.moneysquad.in/become-partner"
                       target="_blank"
                       rel="noopener noreferrer"
                       endIcon={

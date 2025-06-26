@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Vikram Chauhan",
+    name: "Vikram Hegde",
     title: "Chartered Accountant",
     location: "Bangalore",
     avatar: "/testimonial_2.jpeg", // Indian male
@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Amit Kumar",
+    name: "Vignesh Kumar",
     title: "Insurance Agent",
     location: "Chennai",
     avatar: "/testimonial_4.jpeg", // Indian male

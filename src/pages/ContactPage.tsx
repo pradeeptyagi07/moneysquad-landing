@@ -1035,7 +1035,7 @@ const ContactPage = () => {
                 <Box sx={{ display: "flex", gap: 2 }}>
                   <Button
                     component="a"
-                    href="https://app.moneysquad.in/sign-up/become-partner"
+                    href="https://app.moneysquad.in/become-partner"
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="contained"
@@ -1270,7 +1270,7 @@ const ContactPage = () => {
           <Box sx={{ display: "flex", gap: 2, justifyContent: "center", position: "relative", zIndex: 1 }}>
             <Button
               component="a"
-              href="https://app.moneysquad.in/sign-up/become-partner"
+              href="https://app.moneysquad.in/become-partner"
               target="_blank"
               rel="noopener noreferrer"
               variant="contained"

@@ -1,11 +1,74 @@
 "use client"
 
 import React from "react"
-import { Box, Container, Grid, Typography, Button, Paper, Avatar, useTheme, useMediaQuery, styled } from "@mui/material"
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Button,
+  Paper,
+  Avatar,
+  useTheme,
+  useMediaQuery,
+  styled,
+} from "@mui/material"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+
+// Product data model
+type Product = {
+  title: string
+  description: string
+  features: string[]
+  image: string
+}
+
+// Replace static data with this reference object
+const productData: Product[] = [
+  {
+    title: "Personal Loans",
+    description: "Help your clients meet their personal financial needs with quick and hassle-free personal loans.",
+    features: [
+      "Minimal Documentation - Simple paperwork with quick processing for faster approvals.",
+      "Competitive Interest Rates - Access to the best rates from 50+ lending partners.",
+      "Flexible Loan Amounts - Loans ranging from ₹50,000 to ₹50 lakhs to suit various needs.",
+    ],
+    image: "Personal_Loan.jpg",
+  },
+  {
+    title: "Business Loans",
+    description: "Empower businesses with the capital they need to grow, expand, and thrive.",
+    features: [
+      "Collateral-Free Options - Unsecured business loans with minimal documentation requirements.",
+      "Customized Repayment - Flexible repayment options tailored to business cash flows.",
+      "Higher Loan Amounts - Business loans up to ₹2 crores with competitive interest rates.",
+    ],
+    image: "Business_Loan.jpg",
+  },
+  {
+    title: "Professional Loans",
+    description: "Specialized loan products for doctors, CAs, and other professionals to grow their practice.",
+    features: [
+      "Preferential Rates - Special interest rates for qualified professionals.",
+      "Equipment Financing - Specialized loans for medical equipment and professional tools.",
+      "Practice Expansion - Tailored solutions for clinic setup and practice growth.",
+    ],
+    image: "Professional.jpg",
+  },
+  {
+    title: "Overdrafts",
+    description: "Flexible credit line for businesses to manage cash flow gaps and working capital needs.",
+    features: [
+      "Pay Interest Only on Usage - Cost-effective solution with interest charged only on utilized amount.",
+      "Revolving Credit - Withdraw and repay as needed within the approved limit.",
+      "Quick Access to Funds - Immediate availability of funds for emergency business needs.",
+    ],
+    image: "Overdraft.jpg",
+  },
+]
 
 // Product Tab Panel Component
 interface ProductTabPanelProps {
@@ -15,7 +78,7 @@ interface ProductTabPanelProps {
   image: string
 }
 
-export const ProductTabPanel = ({ title, description, features, image }: ProductTabPanelProps) => {
+export const ProductTabPanel: React.FC<ProductTabPanelProps> = ({ title, description, features, image }) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
@@ -50,9 +113,7 @@ export const ProductTabPanel = ({ title, description, features, image }: Product
                   height: "auto",
                   display: "block",
                   transition: "transform 0.5s ease",
-                  "&:hover": {
-                    transform: "scale(1.03)",
-                  },
+                  "&:hover": { transform: "scale(1.03)" },
                 }}
               />
               <Box
@@ -105,49 +166,44 @@ export const ProductTabPanel = ({ title, description, features, image }: Product
             </Typography>
 
             <Box sx={{ mt: 3 }}>
-              {features.map((feature, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    mb: 3,
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      transform: "translateX(5px)",
-                    },
-                  }}
-                >
-                  <Avatar
+              {features.map((feature, index) => {
+                const parts = feature.split(" - ")
+                const featTitle = parts[0].trim()
+                const featDesc = parts[1]?.trim() || ""
+                return (
+                  <Box
+                    key={index}
                     sx={{
-                      width: 56,
-                      height: 56,
-                      bgcolor: "primary.main",
-                      mr: 3,
-                      boxShadow: "0 8px 20px rgba(18,170,158,0.2)",
+                      display: "flex",
+                      alignItems: "flex-start",
+                      mb: 3,
+                      transition: "all 0.3s ease",
+                      "&:hover": { transform: "translateX(5px)" },
                     }}
                   >
-                    <CheckCircleOutlineIcon sx={{ color: "white", fontSize: 28 }} />
-                  </Avatar>
-                  <Box>
-                    <Typography
-                      variant="h6"
-                      component="h4"
-                      gutterBottom
-                      fontFamily="Inter, Arial, sans-serif"
-                      fontWeight="600"
-                      sx={{ mb: 0.5 }}
+                    <Avatar
+                      sx={{ width: 56, height: 56, bgcolor: "primary.main", mr: 3, boxShadow: "0 8px 20px rgba(18,170,158,0.2)" }}
                     >
-                      {feature}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: "0.95rem" }}>
-                      {index === 0 && "Simple paperwork with quick processing for faster approvals."}
-                      {index === 1 && "Access to the best rates from 50+ lending partners."}
-                      {index === 2 && "Loans ranging from ₹50,000 to ₹50 lakhs to suit various needs."}
-                    </Typography>
+                      <CheckCircleOutlineIcon sx={{ color: "white", fontSize: 28 }} />
+                    </Avatar>
+                    <Box>
+                      <Typography
+                        variant="h6"
+                        component="h4"
+                        gutterBottom
+                        fontFamily="Inter, Arial, sans-serif"
+                        fontWeight="600"
+                        sx={{ mb: 0.5 }}
+                      >
+                        {featTitle}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary" sx={{ fontSize: "0.95rem" }}>
+                        {featDesc}
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-              ))}
+                )
+              })}
             </Box>
 
             <Button
@@ -165,10 +221,7 @@ export const ProductTabPanel = ({ title, description, features, image }: Product
                 fontWeight: 600,
                 fontSize: "1rem",
                 boxShadow: "0 8px 20px rgba(18,170,158,0.2)",
-                "&:hover": {
-                  boxShadow: "0 12px 25px rgba(18,170,158,0.3)",
-                  transform: "translateY(-2px)",
-                },
+                "&:hover": { transform: "translateY(-2px)", boxShadow: "0 12px 25px rgba(18,170,158,0.3)" },
                 transition: "all 0.3s ease",
               }}
             >
@@ -197,12 +250,7 @@ const ProductsCTA = () => {
         overflow: "hidden",
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
         <Typography
           variant="h4"
           component="h3"
@@ -219,21 +267,12 @@ const ProductsCTA = () => {
         >
           Ready to Offer These Products?
         </Typography>
-        <Typography
-          variant="body1"
-          color="text.secondary"
-          sx={{
-            maxWidth: 700,
-            mx: "auto",
-            mb: 4,
-            fontSize: "1.1rem",
-          }}
-        >
+        <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 700, mx: "auto", mb: 4, fontSize: "1.1rem" }}>
           Join our partner network today and start offering the best loan products to your clients.
         </Typography>
         <Button
           component="a"
-          href="https://app.moneysquad.in/sign-up/become-partner"
+          href="https://app.moneysquad.in/become-partner"
           target="_blank"
           rel="noopener noreferrer"
           variant="contained"
@@ -248,10 +287,7 @@ const ProductsCTA = () => {
             fontWeight: 600,
             fontSize: "1.1rem",
             boxShadow: "0 8px 20px rgba(18,170,158,0.2)",
-            "&:hover": {
-              boxShadow: "0 12px 25px rgba(18,170,158,0.3)",
-              transform: "translateY(-2px)",
-            },
+            "&:hover": { transform: "translateY(-2px)", boxShadow: "0 12px 25px rgba(18,170,158,0.3)" },
             transition: "all 0.3s ease",
           }}
         >
@@ -272,10 +308,7 @@ const StyledTab = styled(Box)(({ theme }) => ({
   transition: "all 0.3s ease",
   position: "relative",
   textAlign: "center",
-  "&:hover": {
-    color: theme.palette.primary.main,
-    backgroundColor: "rgba(18,170,158,0.04)",
-  },
+  "&:hover": { color: theme.palette.primary.main, backgroundColor: "rgba(18,170,158,0.04)" },
   "&.active": {
     color: theme.palette.primary.main,
     "&::after": {
@@ -295,80 +328,15 @@ const StyledTab = styled(Box)(({ theme }) => ({
 const ProductsSection = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
-  const handleTabChange = (index: number) => {
-    setActiveTab(index)
-  }
-
-  const tabData = [
-    {
-      label: "Personal Loans",
-      title: "Personal Loans",
-      description: "Help your clients meet their personal financial needs with quick and hassle-free personal loans.",
-      features: ["Minimal Documentation", "Competitive Interest Rates", "Flexible Loan Amounts"],
-      image:
-        "Personal_Loan.jpg",
-    },
-    {
-      label: "Business Loans",
-      title: "Business Loans",
-      description: "Empower businesses with the capital they need to grow, expand, and thrive.",
-      features: ["Collateral-Free Options", "Customized Repayment", "Higher Loan Amounts"],
-      image:
-        "Business_Loan.jpg",
-    },
-    {
-      label: "Professional Loans",
-      title: "Professional Loans",
-      description: "Specialized loan products for doctors, CAs, and other professionals to grow their practice.",
-      features: ["Preferential Rates", "Equipment Financing", "Practice Expansion"],
-      image:
-        "Professional.jpg",
-    },
-    {
-      label: "Overdrafts",
-      title: "Overdrafts",
-      description: "Flexible credit line for businesses to manage cash flow gaps and working capital needs.",
-      features: ["Pay Interest Only on Usage", "Revolving Credit", "Quick Access to Funds"],
-      image:
-        "Overdraft.jpg",
-    },
-  ]
-
   return (
     <Box sx={{ py: { xs: 8, md: 10 }, bgcolor: "background.paper" }}>
       <Container maxWidth="xl">
         <Box textAlign="center" mb={8}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <Typography
-              variant="overline"
-              component="p"
-              sx={{
-                color: "primary.main",
-                fontWeight: 600,
-                letterSpacing: 1.5,
-                mb: 1,
-              }}
-            >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+            <Typography variant="overline" component="p" sx={{ color: "primary.main", fontWeight: 600, letterSpacing: 1.5, mb: 1 }}>
               OUR OFFERINGS
             </Typography>
-            <Typography
-              variant="h3"
-              component="h2"
-              gutterBottom
-              fontWeight="bold"
-              fontFamily="Inter, Arial, sans-serif"
-              sx={{
-                mb: 2,
-                background: "linear-gradient(90deg, #333333 0%, #12AA9E 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+            <Typography variant="h3" component="h2" gutterBottom fontWeight="bold" fontFamily="Inter, Arial, sans-serif" sx={{ mb: 2, background: "linear-gradient(90deg, #333333 0%, #12AA9E 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Products
             </Typography>
             <Box sx={{ width: 80, height: 4, bgcolor: "primary.main", mx: "auto", mb: 3, borderRadius: 2 }} />
@@ -379,46 +347,29 @@ const ProductsSection = () => {
         </Box>
 
         {/* Custom Tabs */}
-        <Box
-          sx={{
-            maxWidth: { xs: "100%", md: 800 },
-            mx: "auto",
-            mb: 6,
-            bgcolor: "#f5f5f5",
-            borderRadius: 2,
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            overflow: "hidden",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-          }}
-        >
-          {tabData.map((tab, index) => (
+        <Box sx={{ maxWidth: { xs: "100%", md: 800 }, mx: "auto", mb: 6, bgcolor: "#f5f5f5", borderRadius: 2, display: "flex", flexDirection: { xs: "column", sm: "row" }, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
+          {productData.map((tab, index) => (
             <StyledTab
               key={index}
               className={activeTab === index ? "active" : ""}
-              onClick={() => handleTabChange(index)}
+              onClick={() => setActiveTab(index)}
               sx={{
                 flex: { xs: "1", sm: "1 1 0" },
-                borderBottom: { xs: index < tabData.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none", sm: "none" },
-                borderRight: { xs: "none", sm: index < tabData.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none" },
+                borderBottom: { xs: index < productData.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none", sm: "none" },
+                borderRight: { xs: "none", sm: index < productData.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none" },
                 bgcolor: activeTab === index ? "white" : "transparent",
               }}
             >
-              {tab.label}
+              {tab.title}
             </StyledTab>
           ))}
         </Box>
 
         {/* Tab Content */}
         <Box sx={{ mb: 8 }}>
-          {tabData.map((tab, index) => (
+          {productData.map((tab, index) => (
             <Box key={index} sx={{ display: activeTab === index ? "block" : "none" }}>
-              <ProductTabPanel
-                title={tab.title}
-                description={tab.description}
-                features={tab.features}
-                image={tab.image}
-              />
+              <ProductTabPanel {...tab} />
             </Box>
           ))}
         </Box>
