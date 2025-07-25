@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Vignesh Kumar",
+    name: "Vignesh Iyer",
     title: "Insurance Agent",
     location: "Chennai",
     avatar: "/testimonial_4.jpeg", // Indian male

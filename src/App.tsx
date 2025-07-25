@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage';
 import ContactPage from './pages/ContactPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
+import PartnerAgreementPage from './pages/PartnerAgreementPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="terms" element={<TermsPage />} />
         <Route path="privacy" element={<PrivacyPage />} />
+         <Route path="/partner-agreement" element={<PartnerAgreementPage />} />
       </Route>
     </Routes>
   );

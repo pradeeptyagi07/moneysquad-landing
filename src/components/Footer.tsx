@@ -356,7 +356,7 @@ const Footer = () => {
         <Divider />
         <Box
           sx={{
-            pt: 3,
+            pt: 3,mr:8,
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
@@ -391,14 +391,14 @@ const Footer = () => {
             </MuiLink>
             <MuiLink
               component={RouterLink}
-              to="/"
+              to="/partner-agreement"
               color="text.secondary"
               sx={{ "&:hover": { color: "primary.main" } }}
               underline="none"
               variant="body2"
               onClick={() => scrollToTop()}
             >
-              Cookie Policy
+              Partner Agreement
             </MuiLink>
           </Box>
         </Box>
